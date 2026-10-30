@@ -35,7 +35,7 @@ document.getElementById("quoteForm").addEventListener("submit", (e) => {
   e.preventDefault();
   const f = new FormData(e.target);
   const body = `Name: ${f.get("name")}\nPhone: ${f.get("phone")}\nOrganisation: ${f.get("org")}\nCategory: ${f.get("category")}\n\nRequirement:\n${f.get("msg")}`;
-  window.location.href = `mailto:vindyavasnimarketing2020@gmail.com?subject=${encodeURIComponent("Quote request – " + f.get("category"))}&body=${encodeURIComponent(body)}`;
+  window.location.href = `mailto:vindyvasnimarketing2020@gmail.com?subject=${encodeURIComponent("Quote request – " + f.get("category"))}&body=${encodeURIComponent(body)}`;
   document.getElementById("formNote").textContent = "Thank you! Your email app should open to send the enquiry.";
   e.target.reset();
 });
